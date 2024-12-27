@@ -197,7 +197,7 @@ function handleAnswer(answer) {
 function showResult() {
     let level;
     
-    if (correctAnswers <= 7) {
+    if (correctAnswers <= 8) {
         level = {
             title: "you're a newbie!",
             message: "you haven't been on slack that often at all - you are not slack addicted! congrats!"
