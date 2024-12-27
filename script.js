@@ -105,7 +105,7 @@ const questions = [
             first: "https://emoji.slack-edge.com/T0266FRGM/same/d3ede37f594ebe65.png",
             second: "https://emoji.slack-edge.com/T0266FRGM/highseas-shop-blahaj/b3fc26ad3061f17c.png"
         },
-        correctAnswer: "second"
+        correctAnswer: "first"
     },
     {
         text: "i'm really happy today!",
