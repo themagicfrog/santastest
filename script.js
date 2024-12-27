@@ -197,7 +197,12 @@ function handleAnswer(answer) {
 function showResult() {
     let level;
     
-    if (correctAnswers <= 8) {
+    if (correctAnswers <= 3) {
+        level = {
+            title: "WHERE HAVE YOU BEEN??",
+            message: "i'm sorry... but you're probably not a slack user at all based on your lacking answers"
+        };
+    } else if (correctAnswers <= 8) {
         level = {
             title: "you're a newbie!",
             message: "you haven't been on slack that often at all - you are not slack addicted! congrats!"
