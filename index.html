@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa's Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="snowflakes.css">
+</head>
+<body>
+    <div class="snowflakes" aria-hidden="true"></div>
+    <div class="container">
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+        
+        <div id="start-screen" class="screen active">
+            <h1>Santa is Going to Examine You!</h1>
+            <h2>are you an experienced hack club slack emoji user or not?</h2>
+            <img src="santa.png" class="santa">
+            <h3>choose the correct emoji that should be reacted on the messages!<br>
+                <span class="subtitle">*answers are based on my opinion i am not an expert lol pls give me more suggestions</span>
+            </h3>
+            <button id="start-btn" class="btn">BEGIN!!</button>
+        </div>
+
+        <div id="question-screen" class="screen">
+            <div class="question-counter">QUESTION <span id="current-number">1</span>/15</div>
+            <h2 id="question-text"></h2>
+            <div class="button-group">
+                <button id="first-btn" class="btn emoji-btn"></button>
+                <button id="second-btn" class="btn emoji-btn"></button>
+            </div>
+        </div>
+        <div id="result-screen" class="screen">
+            <h2 id="result-title"></h2>
+            <p id="score-message"></p>
+            <p id="result-message"></p>
+            <img src="https://emoji.slack-edge.com/T0266FRGM/yay/28592c2bf509c53f.gif" class="result-emoji">
+            <button id="restart-btn" class="btn">take test again!</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

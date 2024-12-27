@@ -1,0 +1,28 @@
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.snowflake {
+    color: white;
+    position: fixed;
+    top: -20px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    animation: snowfall linear forwards;
+    animation-duration: 5s;
+    z-index: 5;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+} 

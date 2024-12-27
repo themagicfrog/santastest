@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+    color: white;
+    overflow-x: hidden;
+    background: none;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 10;
+}
+
+#progress {
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+.santa {
+    width: 200px;
+    height: auto;
+    margin: 2rem auto;
+    display: block;
+}
+
+.question-counter {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.screen {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    animation: fadeIn 0.5s;
+    z-index: 2;
+}
+
+.screen.active {
+    display: flex;
+}
+
+h1, h2, #result-title, .question-counter, #score-message {
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(146, 146, 146, 0.5);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    padding: 1rem 3rem;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    transform: scale(1.05) translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.btn:active {
+    transform: scale(0.98) translateY(0);
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+#result-image {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.good-result,
+.naughty-result {
+    display: none;
+}
+
+#result-title {
+    font-size: 3.5rem;
+}
+
+#result-message {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+#start-screen, #question-screen, #result-screen {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.snowflake {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    animation: fall linear forwards;
+    z-index: 1;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-10vh) rotate(0deg);
+    }
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+.emoji-btn {
+    background: none !important;
+    border: 3px solid transparent !important;
+    padding: 10px !important;
+    transition: all 0.3s ease;
+}
+
+.emoji-btn:hover {
+    border-color: rgba(255, 255, 255, 0.8) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    transform: scale(1.1);
+}
+
+.emoji-btn img {
+    width: 64px;
+    height: 64px;
+    display: block;
+}
+
+.result-emoji {
+    width: 64px;
+    height: 64px;
+    margin: 2rem auto;
+    display: block;
+}
+
+#score-message {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.subtitle {
+    font-size: 0.9em;
+    opacity: 0.8;
+    display: block;
+    margin-top: 0.5rem;
+} 
