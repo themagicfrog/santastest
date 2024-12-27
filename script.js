@@ -14,7 +14,7 @@ function createSnowflakes() {
         setTimeout(() => {
             flake.remove();
         }, 5000);
-    }, 50);
+    }, 300);
 }
 
 const questions = [
@@ -239,5 +239,4 @@ function switchScreen(from, to) {
     to.classList.add('active');
 }
 
-createSnowflakes();
-document.addEventListener('DOMContentLoaded', createSnowflakes); 
+createSnowflakes(); 
